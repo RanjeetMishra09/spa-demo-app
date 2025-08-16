@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spa Employees & Manager App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app">
+    <!-- Top Bar -->
+    <div class="topbar">
+      <h2 id="greeting">Welcome 🌸</h2>
+      <button class="role-toggle" onclick="toggleRole()">Switch to Manager</button>
+    </div>
+
+    <!-- EMPLOYEE SCREENS -->
+    <div id="employee-home" class="screen active">
+      <div class="card highlight">
+        <h3>Next Appointment</h3>
+        <p><strong>Aromatherapy</strong> | 10:00 AM</p>
+        <p>Client: Priya Sharma</p>
+      </div>
+
+      <div class="card">
+        <h3>Today's Tasks</h3>
+        <ul>
+          <li>Prepare oils & towels</li>
+          <li>Feedback forms</li>
+          <li>Room sanitization</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="employee-schedule" class="screen">
+      <div class="card">
+        <h3>📅 My Schedule</h3>
+        <p>9:00 AM – Aromatherapy (Rahul)</p>
+        <p>11:00 AM – Swedish Massage (Priya)</p>
+        <p>2:00 PM – Foot Massage (Rohit)</p>
+      </div>
+    </div>
+
+    <div id="employee-earnings" class="screen">
+      <div class="card">
+        <h3>💰 My Earnings</h3>
+        <p><strong>This Month:</strong> ₹25,000</p>
+        <p>Salary: ₹20,000</p>
+        <p>Commission: ₹3,000</p>
+        <p>Tips: ₹2,000</p>
+      </div>
+    </div>
+
+    <div id="employee-attendance" class="screen">
+      <div class="card">
+        <h3>🕒 Attendance</h3>
+        <p>Present Days: 18</p>
+        <p>Leaves Taken: 2</p>
+        <p>Late Arrivals: 1</p>
+        <button class="btn">Request Leave ➕</button>
+      </div>
+    </div>
+
+    <div id="employee-profile" class="screen">
+      <div class="card">
+        <h3>👤 My Profile</h3>
+        <p><strong>Name:</strong> Ranjeet Mishra</p>
+        <p><strong>Role:</strong> Therapist</p>
+        <p><strong>Experience:</strong> 3 Years</p>
+      </div>
+    </div>
+
+    <!-- MANAGER SCREENS -->
+    <div id="manager-dashboard" class="screen hidden">
+      <div class="card highlight">
+        <h3>📊 Manager Dashboard</h3>
+        <p>Active Employees: 12</p>
+        <p>Appointments Today: 24</p>
+        <p>Total Earnings: ₹85,000</p>
+      </div>
+    </div>
+
+    <div id="manager-employees" class="screen hidden">
+      <div class="card">
+        <h3>👥 Employee List</h3>
+        <ul>
+          <li>Ranjeet – Therapist ✅</li>
+          <li>Yogesh – Receptionist ✅</li>
+          <li>Sanika – Therapist ⏳</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="manager-leaves" class="screen hidden">
+      <div class="card">
+        <h3>📩 Leave Requests</h3>
+        <p>Ranjeet – 20th Aug (Pending) <button class="btn small">Approve</button></p>
+        <p>Sanika – 21st Aug (Pending) <button class="btn small">Approve</button></p>
+      </div>
+    </div>
+
+    <div id="manager-tasks" class="screen hidden">
+      <div class="card">
+        <h3>📝 Assign Tasks</h3>
+        <p>Assign: <input type="text" placeholder="Task"></p>
+        <p>Employee: <input type="text" placeholder="Employee Name"></p>
+        <button class="btn">Assign Task ➕</button>
+      </div>
+    </div>
+
+    <div id="manager-reports" class="screen hidden">
+      <div class="card">
+        <h3>📈 Reports</h3>
+        <p>Monthly Revenue: ₹3,20,000</p>
+        <p>Avg Daily Appointments: 30</p>
+        <p>Most Booked Service: Swedish Massage</p>
+      </div>
+    </div>
+
+    <!-- NAVIGATION -->
+    <div class="bottom-nav" id="employee-nav">
+      <div class="nav-item active" onclick="showScreen('employee-home', this)">🏠 Home</div>
+      <div class="nav-item" onclick="showScreen('employee-schedule', this)">📅 Schedule</div>
+      <div class="nav-item" onclick="showScreen('employee-earnings', this)">💰 Earnings</div>
+      <div class="nav-item" onclick="showScreen('employee-attendance', this)">🕒 Attendance</div>
+      <div class="nav-item" onclick="showScreen('employee-profile', this)">👤 Profile</div>
+    </div>
+
+    <div class="bottom-nav hidden" id="manager-nav">
+      <div class="nav-item active" onclick="showScreen('manager-dashboard', this)">📊 Dashboard</div>
+      <div class="nav-item" onclick="showScreen('manager-employees', this)">👥 Employees</div>
+      <div class="nav-item" onclick="showScreen('manager-leaves', this)">📩 Leaves</div>
+      <div class="nav-item" onclick="showScreen('manager-tasks', this)">📝 Tasks</div>
+      <div class="nav-item" onclick="showScreen('manager-reports', this)">📈 Reports</div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

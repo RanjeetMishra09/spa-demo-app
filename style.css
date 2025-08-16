@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #1e1e2f;
+  color: #f0f0f0;
+}
+
+.app {
+  max-width: 450px;
+  margin: auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #2a2a40;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* Top Bar */
+.topbar {
+  background: linear-gradient(135deg, #5a4fcf, #3ab0a6);
+  padding: 20px;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+.role-toggle {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  background: #3ab0a6;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+/* Screens */
+.screen {
+  display: none;
+  padding-bottom: 70px;
+}
+.screen.active {
+  display: block;
+}
+.hidden {
+  display: none !important;
+}
+
+/* Cards */
+.card {
+  background: #32324d;
+  border-radius: 12px;
+  padding: 16px;
+  margin: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+.card h3 {
+  margin: 0 0 10px;
+  color: #a6e4db;
+}
+.highlight {
+  background: #5a4fcf;
+  color: white;
+}
+
+/* Buttons */
+.btn {
+  background: #5a4fcf;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  margin-top: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn:hover {
+  background: #3ab0a6;
+}
+.btn.small {
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+/* Bottom Nav */
+.bottom-nav {
+  display: flex;
+  justify-content: space-around;
+  background: #1e1e2f;
+  padding: 12px 0;
+  border-top: 1px solid #3a3a52;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-width: 450px;
+}
+.nav-item {
+  font-size: 14px;
+  color: #aaa;
+  cursor: pointer;
+}
+.nav-item.active {
+  color: #3ab0a6;
+  font-weight: 600;
+}
